@@ -1,0 +1,59 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background: url('https://wiimg-wildernessinquir.netdna-ssl.com/web/23295_web.jpg') no-repeat top center fixed;
+  background-size: cover;
+  min-height:100vh;
+  margin-bottom: 60px;
+  font-family: 'Quicksand', sans-serif;
+}
+.container {
+  background-color: #FDF3E7;
+  padding: 4em 4em 2em 4em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  width: 90%;
+}
+nav > .container-fluid {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0;
+  padding: .5em 4em;
+  background-color: #FDF3E7;
+}
+.navbar-brand {
+  color: #C63D0F;
+  font-size: 2em;
+}
+.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FF9100;
+}
+.footer {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000;
+}
+hr {
+  border-color: #7E8F7C;
+  margin: 20px 0;
+}
+.shoutout {
+  margin-top: 25px;
+}
+.img-rounded {
+  border-radius: 5px;
+}
+.title {
+  margin-top: 0;
+}
+p {
+  font-size: 1.15em;
+}
