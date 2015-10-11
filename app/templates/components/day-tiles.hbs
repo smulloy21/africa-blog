@@ -1,0 +1,26 @@
+{{#each model as |day|}}
+  {{#link-to 'day' day.id}}
+  <div class="day">
+    <div class="row">
+      <div class="col-xs-6">
+        <h3 class="title">{{moment-format day.date 'dddd'}} <small>{{moment-format day.date 'MMM Do[,] YYYY'}}</small></h3>
+      </div>
+      <div class="col-xs-6 text-right">
+        <h3 class="title"><small>{{day.location}}</small></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 photo-tile-container">
+        <div class="photo-tile" style="background-color: #AAAAAA;">
+        </div>
+      </div>
+      <div class="col-xs-9">
+        <h3>{{day.title}}</h3>
+        <br>
+        <p>{{day.description}}</p><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  {{/link-to}}
+{{/each}}

@@ -1,0 +1,35 @@
+{{#if newDayForm}}
+  <h3>New Day</h3>
+  <form>
+    <div class="form-group">
+      <label for="month">Month</label>
+      {{input value=month id="month" class="form-control"}}
+      <label for="date">Date</label>
+      {{input value=date id="date" class="form-control"}}
+      <label for="year">Year</label>
+      {{input value=year id="year" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input value=title id="title" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea value=description id="description" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      {{input value=location id="location" class="form-control"}}
+    </div>
+
+    <button {{action 'saveDay'}} class="btn btn-default">Add Day</button>
+    <button class="btn btn-default" {{action 'hideNewDayForm'}}>Cancel</button>
+  </form>
+{{else}}
+  <div class="text-center">
+    <button class="btn btn-default" {{action 'showNewDayForm'}}>Add Day</button>
+  </div>
+{{/if}}

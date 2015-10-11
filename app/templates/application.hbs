@@ -1,18 +1,5 @@
 <div class="container-fluid">
-  <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-brand">AfricaBlog</div>
-      <ul class="nav navbar-nav">
-        <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-        <li>{{#link-to 'about'}}About{{/link-to}}</li>
-      </ul>
-      <div class="nav navbar-nav navbar-right">
-        <ul class="nav navbar-nav">
-          <li>{{#link-to 'admin'}}Admin{{/link-to}}</li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  {{nav-bar}}
   <div class="container">
     {{outlet}}
   </div>

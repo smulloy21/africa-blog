@@ -1,0 +1,14 @@
+{{#if form}}
+  <form>
+    <label>Image URL</label>
+    {{input value=image id="image" class="form-control"}}
+    <label>Description</label>
+    {{textarea value=text id="text" class="form-control"}}
+    <button class="btn btn-default" {{action 'addPhoto'}}>Save</button>
+    <button class="btn btn-default" {{action 'hideForm'}}>Cancel</button>
+  </form>
+{{else}}
+  <div class="text-right">
+    <button class="btn btn-default"{{action 'showForm'}}>Add a post</button>
+  </div>
+{{/if}}

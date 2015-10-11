@@ -1,0 +1,14 @@
+{{#if form}}
+  <form>
+    <label>Your name</label>
+    {{input value=name id="name" class="form-control"}}
+    <label>Comment</label>
+    {{textarea value=text id="text" class="form-control"}}
+    <button class="btn btn-default" {{action 'addComment'}}>Save</button>
+    <button class="btn btn-default" {{action 'hideForm'}}>Cancel</button>
+  </form>
+{{else}}
+  <div class="text-right">
+    <button class="btn btn-default"{{action 'showForm'}}>Add a comment</button>
+  </div>
+{{/if}}

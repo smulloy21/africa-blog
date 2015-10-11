@@ -1,0 +1,34 @@
+{{#if form}}
+  <form class="" action="index.html" method="post">
+    <div class="form-group">
+      <label for="month">Month</label>
+      {{input value=month id="month" class="form-control"}}
+      <label for="date">Date</label>
+      {{input value=date id="date" class="form-control"}}
+      <label for="year">Year</label>
+      {{input value=year id="year" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input value=title id="title" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea value=description id="description" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      {{input value=location id="location" class="form-control"}}
+    </div>
+    <button class="btn btn-default" {{action 'update'}}>Update</button>
+    <button class="btn btn-default" {{action 'hideForm'}}>Cancel</button>
+    <button class="btn btn-danger" {{action 'delete'}}>Delete Day</button>
+  </form>
+{{else}}
+  <div class="text-right">
+    <button class="btn btn-default" {{action 'showForm'}}>Edit day</button>
+  </div>
+{{/if}}

@@ -5,13 +5,13 @@ export default Ember.Route.extend({
     return this.store.findRecord('day', params.day_id);
   },
   actions: {
-    addComment(params) {
-      var newComment = this.store.createRecord('comment', params);
+    addPhoto(params) {
+      var newPhoto = this.store.createRecord('photo', params);
       var day = params.day;
-      newComment.save().then(function(){
+      newPhoto.save().then(function(){
         return day.save();
       });
-      this.transitionTo('day', day.id);
+      this.transitionTo('edit', day.id);
     },
   }
 });

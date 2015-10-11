@@ -28,7 +28,7 @@ nav > .container-fluid {
   font-size: 2em;
 }
 .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: #FF9100;
+  background-color: #FF9100;
 }
 .footer {
   border-top-left-radius: 5px;
@@ -56,4 +56,21 @@ hr {
 }
 p {
   font-size: 1.15em;
+}
+a {
+  color: black;
+}
+.day {
+  padding: 5px;
+  border-radius: 5px;
+}
+.day:hover {
+  background-color: #DDD3C7;
+}
+.photo-tile {
+  border-radius: 5px;
+  height: 150px;
+}
+.photo-tile-container {
+  padding: 5px 5px 5px 20px;
 }
