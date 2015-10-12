@@ -1,0 +1,55 @@
+{{#if form}}
+<div class="row">
+  <div class="col-xs-5 photo-tile-container">
+    <div style="background:url({{photo.image}}) center center no-repeat; border-radius: 5px; background-size: cover; height: 300px;">
+    </div>
+  </div>
+  <div class="col-xs-7">
+    <p>{{moment-format photo.timestamp 'h:mm a'}}</p>
+    <form class="" action="index.html" method="post">
+      <div class="form-group row">
+        <div class="col-xs-6">
+          <label for="hour">Hour (Military 24 hour clock)</label>
+          {{input value=hour id="hour" class="form-control"}}
+        </div>
+        <div class="col-xs-6">
+          <label for="min">Minutes</label>
+          {{input value=min id="min" class="form-control"}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image Url</label>
+        {{input value=photo.image id=image class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="text">Description</label>
+        {{textarea value=photo.text id="text" class="form-control"}}
+      </div>
+
+      <button class="btn btn-primary" {{action 'updatePost' photo}}>Update</button>
+      <button class="btn btn-default" {{action 'hideForm'}}>Cancel</button>
+      <button class="btn btn-danger" style="float: right;" {{action 'deletePost' photo}}>Delete Post</button>
+    </form>
+  </div>
+</div>
+{{else}}
+<div class="row">
+  <div class="col-xs-5 photo-tile-container">
+    <div style="background:url({{photo.image}}) center center no-repeat; border-radius: 5px; background-size: cover; height: 300px;">
+    </div>
+  </div>
+  <div class="col-xs-7">
+    <div class="text-right">
+      <p>{{moment-format photo.timestamp 'h:mm a'}}</p>
+      <button class="btn btn-default" {{action 'showForm'}}>Edit post</button>
+    </div>
+    <br>
+    <div style="padding: 15px;">
+      <p>{{photo.text}}</p>
+    </div>
+  </div>
+</div>
+<br>
+{{/if}}

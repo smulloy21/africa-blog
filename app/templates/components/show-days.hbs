@@ -1,4 +1,4 @@
-{{#each model as |day|}}
+{{#each daysSorted as |day|}}
   {{#link-to 'edit' day.id}}
   <div class="day">
     <div class="row">
@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       <div class="col-xs-3 photo-tile-container">
-        <div class="photo-tile" style="background-color: #AAAAAA;">
+        <div class="photo-tile" style="background: #AAAAAA url({{day.photos.firstObject.image}}) center center no-repeat; background-size: cover;">
         </div>
       </div>
       <div class="col-xs-9">

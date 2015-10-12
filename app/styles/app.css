@@ -6,14 +6,13 @@ body {
   background: url('https://wiimg-wildernessinquir.netdna-ssl.com/web/23295_web.jpg') no-repeat top center fixed;
   background-size: cover;
   min-height:100vh;
-  margin-bottom: 60px;
   font-family: 'Quicksand', sans-serif;
 }
 .container {
   background-color: #FDF3E7;
   padding: 4em 4em 2em 4em;
   border-radius: 10px;
-  margin-bottom: 1.5em;
+  margin-bottom: 8em;
   width: 90%;
 }
 nav > .container-fluid {
@@ -27,8 +26,14 @@ nav > .container-fluid {
   color: #C63D0F;
   font-size: 2em;
 }
-.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  background-color: #FF9100;
+.navbar-nav > li > a {
+  border-radius: 5px;
+}
+.navbar-nav > li > a:visited {
+  background-color: #EDE3D7;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
+  background-color: #DDD3C7;
 }
 .footer {
   border-top-left-radius: 5px;
@@ -61,7 +66,7 @@ a {
   color: black;
 }
 .day {
-  padding: 5px;
+  padding: 15px;
   border-radius: 5px;
 }
 .day:hover {

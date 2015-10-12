@@ -1,0 +1,18 @@
+{{#each photosSorted as |photo|}}
+  <div class="row">
+    <div class="col-xs-5 photo-tile-container">
+      <div style="background:url({{photo.image}}) center center no-repeat; border-radius: 5px; background-size: cover; height: 300px;">
+      </div>
+    </div>
+    <div class="col-xs-7">
+      <div class="text-right">
+        <p>{{moment-format photo.timestamp 'h:mm a'}}</p>
+      </div>
+      <br>
+      <div style="padding: 15px;">
+        <p>{{photo.text}}</p>
+      </div>
+    </div>
+  </div>
+  <br>
+{{/each}}

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  mostRecent: ['timestamp:desc'],
+  mostRecent: ['date:asc'],
   daysSorted: Ember.computed.sort('model', 'mostRecent'),
 });

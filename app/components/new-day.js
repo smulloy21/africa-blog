@@ -22,7 +22,12 @@ export default Ember.Component.extend({
         photos: [],
         comments: [],
       };
-      debugger;
+      this.set('date', '');
+      this.set('month', '');
+      this.set('year', '');
+      this.set('title', '');
+      this.set('description', '');
+      this.set('location', '');
       this.set('newDayForm', false);
       this.sendAction('saveDay', params);
     }

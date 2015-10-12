@@ -1,14 +1,24 @@
 {{#if form}}
   <form>
+    <div class="form-group row">
+      <div class="col-xs-6">
+        <label for="hour">Hour (Military 24 hour clock)</label>
+        {{input value=hour id="hour" class="form-control"}}
+      </div>
+      <div class="col-xs-6">
+        <label for="min">Minutes</label>
+        {{input value=min id="min" class="form-control"}}
+      </div>
+    </div>
     <label>Image URL</label>
     {{input value=image id="image" class="form-control"}}
     <label>Description</label>
     {{textarea value=text id="text" class="form-control"}}
-    <button class="btn btn-default" {{action 'addPhoto'}}>Save</button>
+    <button class="btn btn-primary" {{action 'addPhoto'}}>Save</button>
     <button class="btn btn-default" {{action 'hideForm'}}>Cancel</button>
   </form>
 {{else}}
   <div class="text-right">
-    <button class="btn btn-default"{{action 'showForm'}}>Add a post</button>
+    <button class="btn btn-primary"{{action 'showForm'}}>Add a post</button>
   </div>
 {{/if}}

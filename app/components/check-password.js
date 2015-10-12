@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   gotPassword: false,
-  password: "I had a farm in Africa",
+  password: "botswana",
   failedAttempt: false,
   actions: {
     checkPassword(attempt) {

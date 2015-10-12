@@ -12,33 +12,20 @@
     <p>{{model.description}}</p><br>
   </div>
 </div>
-{{#each model.photos as |photo|}}
-  <div class="row">
-    <div class="col-xs-5 photo-tile-container">
-      <div style="background:url({{photo.image}}) center center no-repeat; border-radius: 5px; background-size: cover; height: 300px;">
-      </div>
-    </div>
-    <div class="col-xs-7">
-      <div class="text-right">
-        <p>{{moment-format photo.timestamp 'h:mm a'}}</p>
-      </div>
-      <br>
-      <div style="padding: 15px;">
-        <p>{{photo.text}}</p>
-      </div>
-    </div>
-  </div>
-  <br>
-{{/each}}
+{{day-photos model=model}}
 <h3>Comments</h3>
 {{#each model.comments as |comment|}}
 <div class="row" style="padding: 5px">
-  <div class="col-xs-2">
+  <div class="col-xs-3 col-xs-offset-1">
     <p>{{comment.username}}:</p>
   </div>
-  <div class="col-xs-10">
+  <div class="col-xs-8">
     <p>{{comment.text}}</p>
   </div>
 </div>
 {{/each}}
 {{add-comment model=model addComment='addComment'}}
+<br>
+<div class="text-center">
+  {{#link-to 'index'}}<button class="btn btn-default">Back</button>{{/link-to}}
+</div>
